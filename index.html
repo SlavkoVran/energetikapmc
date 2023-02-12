@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Energetika PMC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Demo styles -->
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <header>
+    <img src="./assets/logo3.png" alt="">
+  </header>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <!-- <img class="hero-img" src="./assets/kontakt.jpg" alt="logo energetika pmc"> -->
+            <div class="home-video-wrapper">
+              <video autoplay loop muted>
+                      <source src="./assets/video.mp4" type="video/mp4" > 
+                  <!-- <source src="./vid/Horse-Fence.mp4 " type="video/mp4"> -->
+                      
+                                      </video>
+          </div>
+            <div class="hero-title-container">
+                <h1 class="hero-title">Energetika PMC</h2>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="./assets/strujneMreze.jpg" alt="">
+            <div class="text-container" >
+                <h2 class="slider-title">Strujne Mreže</h2>
+                <p class="slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum veritatis ipsam, optio quod expedita nobis odio hic repudiandae eius, dolorem fugit fuga minus deleniti ipsum nostrum nesciunt? In, architecto?</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/solarniPaneli.jpg" alt="">
+          <div class="text-container" >
+              <h2 class="slider-title">Solarni paneli</h2>
+              <p class="slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum veritatis ipsam, optio quod expedita nobis odio hic repudiandae eius, dolorem fugit fuga minus deleniti ipsum nostrum nesciunt? In, architecto?</p>
+          </div>
+      </div>
+        <div class="swiper-slide">
+            <img src="./assets/reverzbilnaElektran.jpg" alt="">
+            <div class="text-container" >
+                <h2 class="slider-title">Reverzbilna elektrana</h2>
+                <p class="slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum veritatis ipsam, optio quod expedita nobis odio hic repudiandae eius, dolorem fugit fuga minus deleniti ipsum nostrum nesciunt? In, architecto?</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="./assets/ugalj.jpg" alt="">
+            <div class="text-container" >
+                <h2 class="slider-title">Ugalj</h2>
+                <p class="slider-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione laborum veritatis ipsam, optio quod expedita nobis odio hic repudiandae eius, dolorem fugit fuga minus deleniti ipsum nostrum nesciunt? In, architecto?</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="./assets/kontakt.jpg" alt="">
+            <div class="text-container" >
+                <h2 class="slider-title">Kontakt</h2>
+                <div class="contact-content">
+                    <p class="slider-text">Adresa:</p>
+                    <p class="slider-text">Email:</p>
+                    <p class="slider-text">Telefon:</p>
+                </div>
+            </div>
+        </div>
+     
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      mousewheel: true,
+      speed: 1000,
+    });
+
+    let bullets = document.querySelectorAll('.swiper-pagination-bullet')
+
+    const bulletsArr = Array.from(bullets)
+
+bulletsArr.map(e => {
+  
+switch(e.ariaLabel){
+  case "Go to slide 1":
+    e.setAttribute('before', "Početna")
+    break;
+    case "Go to slide 2":
+    e.setAttribute('before', "Strujne mreže")
+    break;
+    case "Go to slide 3":
+    e.setAttribute('before', "Solarni paneli")
+    break;
+    case "Go to slide 4":
+    e.setAttribute('before', "Reverzbilna elektrana")
+    break;
+    case "Go to slide 5":
+    e.setAttribute('before', "Ugalj")
+    break;
+    case "Go to slide 6":
+    e.setAttribute('before', "Kontakt")
+    break;
+    default: 
+
+  
+}
+})
+
+
+
+    
+console.log('B', bulletsArr)
+  </script>
+</body>
+
+</html>
